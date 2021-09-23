@@ -1,0 +1,102 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-body: hsl(234, 17%, 12%);
+  --color-time: hsl(345, 95%, 68%);
+  --color-box: hsl(236, 21%, 26%);
+  --color-text: hsl(237, 18%, 59%);
+  --color-header: hsl(0, 0%, 100%);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Red Hat Text";
+  background-image: url(../images/bg-stars.svg);
+  background-color: var(--color-body);
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 80% 20%;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  align-self: center;
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: var(--color-header);
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.box p {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.top {
+  position: relative;
+}
+
+.top,
+.bottom {
+  border-radius: 10px;
+  height: 50px;
+  padding: 1rem 0;
+  display: grid;
+  justify-items: center;
+  background-color: var(--color-box);
+}
+
+.top p {
+  font-size: 2.5rem;
+  position: absolute;
+  transform: translateY(50%);
+  color: var(--color-time);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footer {
+  background-image: url(../images/pattern-hills.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.icon_container {
+  display: flex;
+  gap: 3rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    width: 60%;
+  }
+
+  .top p {
+    font-size: 4rem;
+    transform: translateY(20%);
+  }
+}
